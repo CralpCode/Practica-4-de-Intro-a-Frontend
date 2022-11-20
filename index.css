@@ -88,10 +88,12 @@ body{
 
 .btn-1{
     background-color: #009dd4;
+    border: 2px solid #253a3b;
 }
 
 .btn-2{
     background-color: #c00300;
+    border: 2px solid #253a3b;
 }
 
 .d-pad{
@@ -156,6 +158,7 @@ body{
     width: 10%;
     border-radius: 50%;
     margin-right: 45px;
+    border: 2px solid black;
 
 }
 
@@ -258,7 +261,7 @@ body{
 
 .stats-container{
     width: 50%;
-    height: 50%;
+    height: 80%;
     display: flex;
     flex-direction: column;
     align-items: flex-end ;
@@ -266,10 +269,46 @@ body{
 
 .primary-stats-display{
     border-radius: 0.5rem;
-    width: 70%;
+    width: 90%;
     height: 50%;
     background-color: #305b5f;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: small;
+    color: #4deb67;
 }
+
+.primary-stats-display>div>p{
+    font-size: xx-small;
+}
+
+.primary-stats{
+    height: 70%;
+    width: 100%;
+    display: flex ;
+    flex-direction: row;
+    color: #4deb67;
+    align-items: center;
+}
+
+.primary-stats>div>p{
+    font-size: xx-small;
+    margin:0;
+    text-align: center;
+}
+
+.primary-stats>div{
+    display: flex;
+    flex-direction: column;
+    height: 10%;
+    width: 16%;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+}
+   
 
 .stats-display-2{
     display: flex;
@@ -289,7 +328,7 @@ body{
 .display-atk{
     border-radius: 0.5rem;
     width: 25%;
-    height: 60%;
+    height: 40%;
     background-color: #305b5f;
     display: flex;
     justify-content: center;
@@ -299,7 +338,7 @@ body{
 .display-weight{
     border-radius: 0.5rem;
     width: 25%;
-    height: 60%;
+    height: 40%;
     background-color: #305b5f;
     display: flex;
     justify-content: center;
@@ -314,17 +353,17 @@ body{
 .secondary-stats-display{
     margin-left: 2%;
     width: 50%;
-    height: 50%;
+    height: 80%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: space-evenly;
+    justify-content: flex-start;
 }
 
 .display-blue{
     justify-self: flex-start;
     border-radius: 0.5rem;
-    width: 70%;
+    width: 90%;
     height: 50%;
     background-color: #4ca1a8;
 }
@@ -332,8 +371,7 @@ body{
 .btns-sts{
     justify-self: flex-start;
     width: 70%;
-    height: 30%;
-    background-color: #4ca1a8;
+    height: 50%;
 }
 
 .container-search{
@@ -391,13 +429,13 @@ body{
 @media  (min-width: 890px) {
     .primary-display>img{
         height: 60%;
-        width: 40%;
+        width: 50%
     }
 }
 
 @media  (min-width: 1024px) {
     .primary-display>img{
         height: 60%;
-        width: 30%;
+        width: 40%;
     }
 }
