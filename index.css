@@ -642,12 +642,17 @@ body{
 @media  (min-height: 1100px) {
 
     .pokedex-top{
-        height: 300px;
+        height: 400px;
+        width: 700px;
+    }
+
+    .hinge{
+        height: 30px;
         width: 700px;
     }
 
     .pokedex-bottom-b{
-        height: 300px;
+        height: 400px;
         width: 700px;
     }
 }
