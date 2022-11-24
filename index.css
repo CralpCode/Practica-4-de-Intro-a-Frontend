@@ -476,7 +476,7 @@ body{
     width: 30px;
     border: 3px solid #000;
     border-radius: 50%;
-    background-color: #ffee00;
+    background-color: #c4b924;
 }
 
 .container-search{
@@ -496,6 +496,13 @@ body{
     margin: 0;
     display: inline;
     font-size: small;
+}
+
+.btn-rl{
+    width: 160px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 #pokesearch{
@@ -522,6 +529,20 @@ body{
 
 #pokesearch::-webkit-search-cancel-button{
     display: none;
+}
+
+#btn-lc,#btn-rc{
+    color: #4deb67;
+    background-color: #305b5f;
+    border: none;
+    border-radius: 0.5rem;
+    width: 70px;
+    height: 35px;
+}
+
+#btn-lc:hover,#btn-rc:hover{
+    color: #253a3b;
+    background-color: #4deb67;
 }
 
 @media  (min-width: 850px) {

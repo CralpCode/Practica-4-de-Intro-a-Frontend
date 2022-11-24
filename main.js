@@ -95,7 +95,7 @@ const ledsoff = (valor) => {
         document.getElementById("circle-2").style.display = "none";
         document.getElementById("led-blue").style.backgroundColor = "#00bbff";
         document.getElementById("circle-1").style.display = "block";
-       
+        document.getElementById("led-rl").style.backgroundColor = "#c4b924";
     }
 
     if (valor === false) {
@@ -178,7 +178,7 @@ const arrowsClick = (direction) => {
         valor = pokesearch.value;
         if (Number(valor)>0) {
             pokesearch.value = Number(valor) - 1;
-            console.log(pokesearch.value)
+            document.getElementById("led-rl").style.backgroundColor = "#ffee00";
             rst();
             const url = "https://pokeapi.co/api/v2/pokemon/" + pokesearch.value ;
             if (url != "https://pokeapi.co/api/v2/pokemon/") {
@@ -191,7 +191,7 @@ const arrowsClick = (direction) => {
         if (Number(valor)>=0) {
             pokesearch.value = Number(valor) + 1;
             rst();
-            console.log(pokesearch.value)
+            document.getElementById("led-rl").style.backgroundColor = "#ffee00";
             const url = "https://pokeapi.co/api/v2/pokemon/" + pokesearch.value ;
             if (url != "https://pokeapi.co/api/v2/pokemon/") {
                 fetchPokemon(url);
