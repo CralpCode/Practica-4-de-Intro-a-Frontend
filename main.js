@@ -4,27 +4,21 @@ const poke_ht = document.getElementById("display-atk");
 const poke_wth = document.getElementById("display-weight");
 const poketype = document.getElementById("pokeType");
 const stats = document.getElementById("primary-stats");
+const pokemoves = document.getElementById("moves");
+const reinicio = document.getElementById("mini-btn");
+
 poke_ht.innerHTML += "<p id ='p-1'></p>";
 poke_wth.innerHTML += "<p id ='p-2'></p>";
-
 
 pokesearch.addEventListener("input", () => {
     var pokeName = pokesearch.value;
     pokeName = pokeName.toLowerCase();
-    poketype.textContent = "";
-    pokepvalue.textContent = "";
-    stats.innerHTML = "";
-    document.getElementById("p-1").innerHTML = " M";
-    document.getElementById("p-2").innerHTML = " KG";
-    document.getElementById("led-yellow").style.backgroundColor = "#ffee00";
-    document.getElementById("circle-3").style.display = "block";
-    pokeImage("./assets/Not-pokemon.png");
-    document.getElementById("load").textContent = "Buscando..";
+    rst();
     const url = "https://pokeapi.co/api/v2/pokemon/" + pokeName;
     if (url != "https://pokeapi.co/api/v2/pokemon/") {
         fetchPokemon(url);
     }
-})
+});
 
 
 const fetchPokemon = (url) => {
@@ -72,7 +66,7 @@ const fetchPokemon = (url) => {
             document.getElementById("p-2").innerHTML = data.weight + " KG";
             document.getElementById("load").textContent = "Encontrado";
 
-            pokeMoves(data.move);
+            pokeMoves(data.moves);
             ledsoff(true);
             ledson();
             pokeImage(pokeImg);
@@ -141,5 +135,40 @@ const pokeInfotype = (pokevalor) => {
 }
 
 const pokeMoves = (moves) =>{
+
     
+    let alltypes = "";
+
+    let pokearray = moves.map(
+        function (element) {
+            alltypes = alltypes + element.move.name;
+            if (moves.length > 1 && element.slot != moves.length) {
+                alltypes = alltypes + ", ";
+            }
+        }
+    )
+
+    pokearray;
+
+    pokemoves.textContent = "Movimientos : " + alltypes;
 }
+
+const rst = (valor) => {
+
+    if (valor == true) {
+        pokesearch.value = "";
+    }
+
+    poketype.textContent = "";
+    pokepvalue.textContent = "";
+    stats.innerHTML = "";
+    pokemoves.textContent = "";
+    document.getElementById("p-1").innerHTML = " M";
+    document.getElementById("p-2").innerHTML = " KG";
+    document.getElementById("led-yellow").style.backgroundColor = "#ffee00";
+    document.getElementById("circle-3").style.display = "block";
+    pokeImage("./assets/Not-pokemon.png");
+    document.getElementById("load").textContent = "Buscando..";
+    ledsoff(false);
+}
+
