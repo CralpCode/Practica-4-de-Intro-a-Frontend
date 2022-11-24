@@ -638,3 +638,16 @@ body{
 
     
 }
+
+@media  (min-height: 1100px) {
+
+    .pokedex-top{
+        height: 300px;
+        width: 700px;
+    }
+
+    .pokedex-bottom-b{
+        height: 300px;
+        width: 700px;
+    }
+}
