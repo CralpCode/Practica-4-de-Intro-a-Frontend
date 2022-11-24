@@ -24,7 +24,26 @@
               <div class="btn-2" id="btn-2"></div>
             </div>
           </div>
-          <div class="d-pad"></div>
+          <div class="d-pad">
+            <div class="arrow-up-dpad">
+              <div class="arrow-up">
+                <img src="./assets/up-arrrows.png" alt="up-arrow">
+              </div>
+            </div>
+            <div class="arrow-lr-dpad">
+              <div class="arrow-left">
+                <img src="./assets/left-arrow.png" alt="left-arrow">
+              </div>
+              <div class="arrow-rigth">
+                <img src="./assets/rigth-arrrows.png" alt="rigth-arrow">
+              </div>
+            </div>
+            <div class="arrow-down-dpad">
+              <div class="arrow-down">
+                <img src="./assets/down-arrow.png" alt="down-arrow">
+              </div>
+            </div>
+          </div>
         </div>
         <div class="display">
           <div class="primary-display">
@@ -86,8 +105,8 @@
               </div>
               <div class="btns-sts">
                 <div class="btn-rl">
-                  <input type="button" value="<">
-                  <input type="button" value=">">
+                  <input type="button" value="<" onclick='arrowsClick("left")'>
+                  <input type="button" value=">" onclick='arrowsClick("rigth")'>
                 </div>
                 <div class="led-rl">
 
